@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Initial values for price range slider -->
+    <array name="initial_price_range_values">
+        <item>50</item>
+        <item>500</item>
+    </array>
+</resources> 

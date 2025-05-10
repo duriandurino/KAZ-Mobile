@@ -1,5 +1,279 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.ChillInnMobile" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Base application theme -->
+    <style name="Theme.ChillInnMobile" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <!-- Tertiary brand color -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorTertiaryVariant">@color/tertiary_dark</item>
+        <item name="colorOnTertiary">@color/white</item>
+        
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- Navigation bar color -->
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/primary</item>
+        <item name="colorOnBackground">@color/primary</item>
+        
+        <!-- Error color -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+        
+        <!-- Text appearance -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.ChillInn.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.ChillInn.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.ChillInn.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.ChillInn.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.ChillInn.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.ChillInn.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.ChillInn.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.ChillInn.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.ChillInn.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.ChillInn.Body2</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.ChillInn.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.ChillInn.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.ChillInn.Overline</item>
+        
+        <!-- Shape appearance -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.ChillInn.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ChillInn.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.ChillInn.LargeComponent</item>
+        
+        <!-- Component styles -->
+        <item name="materialButtonStyle">@style/Widget.ChillInn.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.ChillInn.CardView</item>
+        <item name="bottomNavigationStyle">@style/Widget.ChillInn.BottomNavigation</item>
+        <item name="textInputStyle">@style/Widget.ChillInn.TextInputLayout</item>
+        <item name="chipStyle">@style/Widget.ChillInn.Chip</item>
+        <item name="tabStyle">@style/Widget.ChillInn.TabLayout</item>
+        
+        <!-- Motion & animations -->
+        <item name="motionDurationShort1">100</item>
+        <item name="motionDurationShort2">200</item>
+        <item name="motionDurationMedium1">300</item>
+        <item name="motionDurationMedium2">400</item>
+        <item name="motionDurationLong1">500</item>
+        <item name="motionDurationLong2">600</item>
+        <item name="motionEasingStandard">@android:interpolator/fast_out_slow_in</item>
+        <item name="motionEasingEmphasized">@android:interpolator/fast_out_linear_in</item>
+    </style>
+    
+    <!-- Typography styles -->
+    <style name="TextAppearance.ChillInn.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/playfair_display</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/playfair_display</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">-0.005</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/playfair_display</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/playfair_display</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/playfair_display_semi_bold</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/playfair_display_semi_bold</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    
+    <style name="TextAppearance.ChillInn.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    
+    <!-- Shape styles -->
+    <style name="ShapeAppearance.ChillInn.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    
+    <style name="ShapeAppearance.ChillInn.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    
+    <style name="ShapeAppearance.ChillInn.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    
+    <!-- Component styles -->
+    <style name="Widget.ChillInn.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/secondary</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="elevation">4dp</item>
+        <item name="rippleColor">@color/primary_translucent</item>
+    </style>
+    
+    <style name="Widget.ChillInn.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/secondary</item>
+        <item name="android:textColor">@color/secondary</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">@color/secondary_translucent</item>
+    </style>
+    
+    <style name="Widget.ChillInn.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="rippleColor">@color/secondary_translucent</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    
+    <style name="Widget.ChillInn.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="rippleColor">@color/ripple</item>
+    </style>
+    
+    <style name="Widget.ChillInn.CardView.Elevated" parent="Widget.ChillInn.CardView">
+        <item name="cardElevation">8dp</item>
+    </style>
+    
+    <style name="Widget.ChillInn.CardView.Flat" parent="Widget.ChillInn.CardView">
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/divider</item>
+    </style>
+    
+    <style name="Widget.ChillInn.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+        <item name="itemRippleColor">@color/secondary_translucent</item>
+        <item name="elevation">8dp</item>
+        <item name="itemActiveIndicatorStyle">@style/App.BottomNavigation.ActiveIndicator</item>
+    </style>
+
+    <style name="App.BottomNavigation.ActiveIndicator" parent="@style/Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/secondary_translucent</item>
+        <item name="android:width">48dp</item>
+        <item name="android:height">32dp</item>
+    </style>
+    
+    <style name="Widget.ChillInn.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/secondary</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="hintTextColor">@color/secondary</item>
+        <item name="errorTextColor">@color/error</item>
+        <item name="errorIconTint">@color/error</item>
+        <item name="counterTextColor">@color/text_secondary</item>
+    </style>
+    
+    <style name="Widget.ChillInn.Chip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipBackgroundColor">@color/surface</item>
+        <item name="chipIconTint">@color/secondary</item>
+        <item name="chipStrokeColor">@color/secondary_translucent</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="rippleColor">@color/secondary_translucent</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    
+    <style name="Widget.ChillInn.Chip.Filter" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/surface</item>
+        <item name="chipIconTint">@color/secondary</item>
+        <item name="chipStrokeColor">@color/secondary_translucent</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="checkedIconTint">@color/primary</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="chipIconVisible">true</item>
+    </style>
+    
+    <style name="Widget.ChillInn.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabIndicatorColor">@color/secondary</item>
+        <item name="tabSelectedTextColor">@color/primary</item>
+        <item name="tabTextColor">@color/text_secondary</item>
+        <item name="tabRippleColor">@color/secondary_translucent</item>
+        <item name="tabUnboundedRipple">true</item>
+    </style>
 </resources>

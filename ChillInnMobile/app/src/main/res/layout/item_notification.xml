@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:stateListAnimator="@animator/card_elevation_selector"
+    android:transitionName="notification_card_transition"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:rippleColor="@color/ripple">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:minHeight="96dp">
+
+        <View
+            android:id="@+id/unread_indicator"
+            android:layout_width="6dp"
+            android:layout_height="0dp"
+            android:background="@drawable/unread_indicator_rounded"
+            android:layout_marginVertical="4dp"
+            android:visibility="gone"
+            android:contentDescription="Unread notification indicator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/icon_container"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@id/unread_indicator"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/notification_type_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/notification_icon_background"
+                android:padding="14dp"
+                android:contentDescription="Notification type icon"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView"
+                app:tint="@color/white"
+                tools:backgroundTint="@color/secondary"
+                tools:src="@drawable/ic_notification_booking" />
+                
+            <View
+                android:id="@+id/ripple_effect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ripple_circle"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toStartOf="@+id/notification_time"
+            app:layout_constraintStart_toEndOf="@+id/icon_container"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Booking Confirmed!" />
+
+        <TextView
+            android:id="@+id/notification_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="@color/text_secondary"
+            android:lineSpacingExtra="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/notification_delete_button"
+            app:layout_constraintStart_toStartOf="@+id/notification_title"
+            app:layout_constraintTop_toBottomOf="@+id/notification_title"
+            tools:text="Your booking for Deluxe Suite is confirmed. Check-in date: May 20, 2025. We're looking forward to your stay!" />
+
+        <TextView
+            android:id="@+id/notification_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_time"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/text_hint"
+            android:gravity="center_vertical"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@color/text_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2h ago" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/notification_action_button"
+            style="@style/Widget.ChillInn.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="0dp"
+            android:minHeight="40dp"
+            android:textAllCaps="false"
+            android:textAppearance="?attr/textAppearanceButton"
+            android:visibility="gone"
+            app:cornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="@+id/notification_message"
+            app:layout_constraintTop_toBottomOf="@+id/notification_message"
+            app:rippleColor="@color/secondary_translucent"
+            tools:text="View Booking"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/notification_delete_button"
+            style="@style/Widget.ChillInn.Button.IconButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="Delete notification"
+            app:icon="@drawable/ic_delete"
+            app:iconTint="@color/text_secondary"
+            app:iconSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notification_time" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            app:dividerColor="@color/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/notification_title"
+            app:layout_constraintTop_toBottomOf="@+id/notification_action_button"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/notification_response_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:singleSelection="true"
+            tools:visibility="visible">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_accept"
+                style="@style/Widget.ChillInn.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:minWidth="100dp"
+                android:text="Accept"
+                android:textColor="@color/text"
+                android:contentDescription="Accept notification"
+                app:icon="@drawable/ic_check"
+                app:iconTint="@color/text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_decline"
+                style="@style/Widget.ChillInn.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:minWidth="100dp"
+                android:text="Decline"
+                android:textColor="@color/text"
+                android:contentDescription="Decline notification"
+                app:icon="@drawable/ic_close"
+                app:iconTint="@color/text" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView> 

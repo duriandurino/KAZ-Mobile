@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shape appearances for room items -->
+    <style name="ShapeAppearance.App.TopRoundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+    
+    <!-- Shape appearance for circular images -->
+    <style name="ShapeAppearance.App.CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    
+    <!-- Shape appearance for rounded corner images -->
+    <style name="ShapeAppearance.App.CornerRadius" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    
+    <!-- Icon button style -->
+    <style name="Widget.ChillInn.Button.IconButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="rippleColor">@color/ripple</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+    
+    <!-- Text button style -->
+    <style name="Widget.ChillInn.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="rippleColor">@color/secondary_translucent</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    
+    <!-- Outlined button style -->
+    <style name="Widget.ChillInn.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="strokeColor">@color/secondary</item>
+        <item name="rippleColor">@color/secondary_translucent</item>
+        <item name="iconTint">@color/secondary</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    
+    <!-- Primary button style -->
+    <style name="Widget.ChillInn.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_on_secondary</item>
+        <item name="backgroundTint">@color/secondary</item>
+        <item name="rippleColor">@color/secondary_dark</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+</resources> 
