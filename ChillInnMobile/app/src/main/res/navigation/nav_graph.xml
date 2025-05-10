@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Main Fragments -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.donate.chillinnmobile.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_roomDetailsFragment"
+            app:destination="@id/roomDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_promotionsFragment"
+            app:destination="@id/promotionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/roomDetailsFragment"
+        android:name="com.donate.chillinnmobile.fragments.RoomDetailsFragment"
+        android:label="Room Details"
+        tools:layout="@layout/fragment_room_details">
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_roomDetailsFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment" />
+        <action
+            android:id="@+id/action_roomDetailsFragment_to_reviewsFragment"
+            app:destination="@id/reviewsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.donate.chillinnmobile.fragments.BookingFragment"
+        android:label="Book Room"
+        tools:layout="@layout/fragment_booking">
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bookingFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.donate.chillinnmobile.fragments.PaymentFragment"
+        android:label="Payment"
+        tools:layout="@layout/fragment_payment">
+        <argument
+            android:name="bookingId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_paymentFragment_to_bookingsFragment"
+            app:destination="@id/bookingsFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_paymentFragment_to_paymentConfirmationFragment"
+            app:destination="@id/paymentConfirmationFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/paymentConfirmationFragment"
+        android:name="com.donate.chillinnmobile.fragments.PaymentConfirmationFragment"
+        android:label="Payment Confirmation"
+        tools:layout="@layout/fragment_payment_confirmation">
+        <argument
+            android:name="paymentId"
+            app:argType="string" />
+        <argument
+            android:name="lastFourDigits"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_paymentConfirmationFragment_to_bookingsFragment"
+            app:destination="@id/bookingsFragment" />
+        <action
+            android:id="@+id/action_paymentConfirmationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.donate.chillinnmobile.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_helpSupportFragment"
+            app:destination="@id/helpSupportFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.donate.chillinnmobile.fragments.AccountFragment"
+        android:label="Account Settings"
+        tools:layout="@layout/fragment_account" />
+        
+    <fragment
+        android:id="@+id/helpSupportFragment"
+        android:name="com.donate.chillinnmobile.fragments.HelpSupportFragment"
+        android:label="Help &amp; Support"
+        tools:layout="@layout/fragment_help_support" />
+    
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.donate.chillinnmobile.fragments.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_notificationsFragment_to_bookingsFragment"
+            app:destination="@id/bookingsFragment" />
+        <action
+            android:id="@+id/action_notificationsFragment_to_promotionsFragment"
+            app:destination="@id/promotionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/promotionsFragment"
+        android:name="com.kaz.chillinnmobile.ui.promotions.PromotionsFragment"
+        android:label="Special Offers"
+        tools:layout="@layout/fragment_promotions">
+        <action
+            android:id="@+id/action_promotionsFragment_to_roomDetailsFragment"
+            app:destination="@id/roomDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingsFragment"
+        android:name="com.donate.chillinnmobile.fragments.BookingsFragment"
+        android:label="Bookings"
+        tools:layout="@layout/fragment_bookings">
+        <action
+            android:id="@+id/action_bookingsFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.donate.chillinnmobile.fragments.ReviewsFragment"
+        android:label="Reviews"
+        tools:layout="@layout/fragment_reviews">
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Admin Fragments -->
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.donate.chillinnmobile.fragments.AdminDashboardFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard">
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_manageRoomsFragment"
+            app:destination="@id/manageRoomsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manageRoomsFragment"
+        android:name="com.donate.chillinnmobile.fragments.ManageRoomsFragment"
+        android:label="Manage Rooms"
+        tools:layout="@layout/fragment_manage_rooms">
+        <action
+            android:id="@+id/action_manageRoomsFragment_to_roomDetailsFragment"
+            app:destination="@id/roomDetailsFragment" />
+    </fragment>
+
+    <!-- Global Actions -->
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/homeFragment"
+        app:popUpToInclusive="true" />
+
+</navigation> 

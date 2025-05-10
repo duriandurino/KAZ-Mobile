@@ -212,6 +212,16 @@ Inside utils/:
  ImageUploader.kt (Cloudinary image uploading integration)
 
 🗃️ Step 11: XML UI Layouts
+
+UI Color theme: {
+  --primary-color: #2C1810;
+  --secondary-color: #D4AF37;
+  --background-color: #F5F5F5;
+  --text-color: #2C1810;
+  --border-color: #D4AF37;
+  --hover-color: #3D2317;
+}
+
 Inside res/layout/:
 
  activity_main.xml

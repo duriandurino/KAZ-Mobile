@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notification Colors -->
+    <color name="notificationReadBackground">#F5F5F5</color> <!-- Light gray -->
+    <color name="notificationUnreadBackground">#E1F5FE</color> <!-- Very light blue -->
+    <color name="unreadIndicator">#3F51B5</color> <!-- Blue -->
+    
+    <!-- Primary brand colors (if they don't exist already) -->
+    <color name="primaryColor">#2C1810</color> <!-- Dark brown -->
+    <color name="secondaryColor">#D4AF37</color> <!-- Gold -->
+</resources> 
